@@ -1,0 +1,243 @@
+[0m22:14:33.901262 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000272346E9060>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002723577FD30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002723577F7F0>]}
+
+
+============================== 22:14:33.910876 | ef91c59e-682e-4861-9392-d5cbce8b2f86 ==============================
+[0m22:14:33.910876 [info ] [MainThread]: Running with dbt=1.11.7
+[0m22:14:33.913775 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\ACER\\.dbt', 'invocation_command': 'dbt init project', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m22:14:33.946381 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\ACER\.dbt
+[0m22:14:33.949380 [debug] [MainThread]: Starter project path: C:\Users\ACER\Desktop\dbt_bi_metrics_platform_db\.env\lib\site-packages\dbt\include\starter_project
+[0m22:14:33.971102 [info ] [MainThread]: 
+Your new dbt project "project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m22:14:33.972102 [info ] [MainThread]: Setting up your profile.
+[0m22:15:21.143478 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m22:15:21.143478 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m22:15:21.144480 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m22:49:10.965291 [info ] [MainThread]: Profile project written to C:\Users\ACER\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m22:49:10.977566 [debug] [MainThread]: Command `dbt init` succeeded at 22:49:10.976562 after 2077.21 seconds
+[0m22:49:10.981564 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000272346E9060>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002723577FA30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002723512DF90>]}
+[0m22:49:10.986562 [debug] [MainThread]: Flushing usage events
+[0m22:49:12.661566 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:08:08.362899 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D90E6A8FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D90F9490C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D90F948190>]}
+
+
+============================== 23:08:08.373891 | 272ee5c6-4da5-470e-9886-577ef989f2b3 ==============================
+[0m23:08:08.373891 [info ] [MainThread]: Running with dbt=1.11.7
+[0m23:08:08.375906 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\ACER\\.dbt', 'invocation_command': 'dbt seed', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m23:08:08.377173 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\ACER\Desktop\dbt_bi_metrics_platform_db\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m23:08:08.379141 [debug] [MainThread]: Command `dbt seed` failed at 23:08:08.379141 after 0.22 seconds
+[0m23:08:08.380132 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D90E6A8FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D90F949150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D90F949120>]}
+[0m23:08:08.381224 [debug] [MainThread]: Flushing usage events
+[0m23:08:10.228886 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:10:02.003702 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016EFC288FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016EFD529060>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016EFD5281C0>]}
+
+
+============================== 23:10:02.008822 | bb488355-19f6-45fa-9b87-ea38aa0fa139 ==============================
+[0m23:10:02.008822 [info ] [MainThread]: Running with dbt=1.11.7
+[0m23:10:02.010720 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\ACER\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt seed', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m23:10:02.011711 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\ACER\Desktop\dbt_bi_metrics_platform_db\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m23:10:02.013712 [debug] [MainThread]: Command `dbt seed` failed at 23:10:02.013712 after 0.14 seconds
+[0m23:10:02.014711 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016EFC288FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016EFD529150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016EFD529120>]}
+[0m23:10:02.014711 [debug] [MainThread]: Flushing usage events
+[0m23:10:03.690477 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:13:09.730465 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C2A05D9000>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C2A1883EB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C2A1880220>]}
+
+
+============================== 23:13:09.736699 | df643204-0e24-4266-be22-d76948e71a0f ==============================
+[0m23:13:09.736699 [info ] [MainThread]: Running with dbt=1.11.7
+[0m23:13:09.737586 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\ACER\\.dbt', 'indirect_selection': 'eager', 'invocation_command': 'dbt seed', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\ACER\\Desktop\\dbt_bi_metrics_platform_db\\logs'}
+[0m23:13:10.351523 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m23:13:10.352506 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m23:13:10.353505 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m23:13:10.680158 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'df643204-0e24-4266-be22-d76948e71a0f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C2A3486EF0>]}
+[0m23:13:10.760808 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'df643204-0e24-4266-be22-d76948e71a0f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C2A0F99360>]}
+[0m23:13:10.762707 [info ] [MainThread]: Registered adapter: snowflake=1.11.3
+[0m23:13:11.172781 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m23:13:11.173826 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m23:13:11.175189 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'df643204-0e24-4266-be22-d76948e71a0f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C2A36A4E50>]}
+[0m23:13:12.327567 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.dbt_bi_metrics_platform_db
+[0m23:13:12.334575 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'df643204-0e24-4266-be22-d76948e71a0f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C2A3A54160>]}
+[0m23:13:12.393109 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ACER\Desktop\dbt_bi_metrics_platform_db\target\manifest.json
+[0m23:13:12.398165 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ACER\Desktop\dbt_bi_metrics_platform_db\target\semantic_manifest.json
+[0m23:13:12.432650 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'df643204-0e24-4266-be22-d76948e71a0f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C2A3A37640>]}
+[0m23:13:12.434262 [info ] [MainThread]: Found 522 macros
+[0m23:13:12.435291 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'df643204-0e24-4266-be22-d76948e71a0f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C2A3A8F430>]}
+[0m23:13:12.437275 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m23:13:12.439281 [debug] [MainThread]: Command end result
+[0m23:13:12.467104 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ACER\Desktop\dbt_bi_metrics_platform_db\target\manifest.json
+[0m23:13:12.470103 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ACER\Desktop\dbt_bi_metrics_platform_db\target\semantic_manifest.json
+[0m23:13:12.476160 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ACER\Desktop\dbt_bi_metrics_platform_db\target\run_results.json
+[0m23:13:12.478146 [info ] [MainThread]: 
+[0m23:13:12.479146 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:13:12.480147 [info ] [MainThread]: 
+[0m23:13:12.480147 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=0
+[0m23:13:12.483148 [debug] [MainThread]: Command `dbt seed` succeeded at 23:13:12.483148 after 2.90 seconds
+[0m23:13:12.484146 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C2A05D9000>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C2A3486EF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C2A0F99360>]}
+[0m23:13:12.485146 [debug] [MainThread]: Flushing usage events
+[0m23:13:14.152287 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:16:19.152921 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F5FE6E8EE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F5FF91EC80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F5FF91F910>]}
+
+
+============================== 23:16:19.157223 | 902d4ef9-6681-44b8-8e1e-d7b9ee81cba3 ==============================
+[0m23:16:19.157223 [info ] [MainThread]: Running with dbt=1.11.7
+[0m23:16:19.159222 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\ACER\\.dbt', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt run', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\ACER\\Desktop\\dbt_bi_metrics_platform_db\\logs'}
+[0m23:16:19.698899 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m23:16:19.700854 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m23:16:19.701884 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m23:16:19.948734 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '902d4ef9-6681-44b8-8e1e-d7b9ee81cba3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F5FB9CEDA0>]}
+[0m23:16:20.034698 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '902d4ef9-6681-44b8-8e1e-d7b9ee81cba3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F5FF787550>]}
+[0m23:16:20.036703 [info ] [MainThread]: Registered adapter: snowflake=1.11.3
+[0m23:16:20.379123 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m23:16:20.551281 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:16:20.551281 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m23:16:20.552273 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:16:20.553266 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.dbt_bi_metrics_platform_db
+[0m23:16:20.561317 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '902d4ef9-6681-44b8-8e1e-d7b9ee81cba3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F581C41420>]}
+[0m23:16:20.633920 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ACER\Desktop\dbt_bi_metrics_platform_db\target\manifest.json
+[0m23:16:20.637924 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ACER\Desktop\dbt_bi_metrics_platform_db\target\semantic_manifest.json
+[0m23:16:20.663369 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '902d4ef9-6681-44b8-8e1e-d7b9ee81cba3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F581BF1840>]}
+[0m23:16:20.665379 [info ] [MainThread]: Found 522 macros
+[0m23:16:20.666391 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '902d4ef9-6681-44b8-8e1e-d7b9ee81cba3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F581BF2D10>]}
+[0m23:16:20.668381 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m23:16:20.671848 [debug] [MainThread]: Command end result
+[0m23:16:20.704370 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ACER\Desktop\dbt_bi_metrics_platform_db\target\manifest.json
+[0m23:16:20.709422 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ACER\Desktop\dbt_bi_metrics_platform_db\target\semantic_manifest.json
+[0m23:16:20.715623 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ACER\Desktop\dbt_bi_metrics_platform_db\target\run_results.json
+[0m23:16:20.716631 [debug] [MainThread]: Command `dbt run` succeeded at 23:16:20.716631 after 1.68 seconds
+[0m23:16:20.717632 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F5FE6E8EE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F581C005B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F5FF787550>]}
+[0m23:16:20.717632 [debug] [MainThread]: Flushing usage events
+[0m23:16:22.366483 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:17:33.520132 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028225F9D000>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028227243EB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028227240220>]}
+
+
+============================== 23:17:33.525097 | a72ea826-9181-436f-a0d0-f4be2f74ff8f ==============================
+[0m23:17:33.525097 [info ] [MainThread]: Running with dbt=1.11.7
+[0m23:17:33.525097 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\ACER\\.dbt', 'use_colors': 'True', 'invocation_command': 'dbt seed', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\ACER\\Desktop\\dbt_bi_metrics_platform_db\\logs'}
+[0m23:17:33.895625 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m23:17:33.896569 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m23:17:33.897519 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m23:17:34.143119 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a72ea826-9181-436f-a0d0-f4be2f74ff8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028228E46EF0>]}
+[0m23:17:34.239843 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a72ea826-9181-436f-a0d0-f4be2f74ff8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028226959360>]}
+[0m23:17:34.240914 [info ] [MainThread]: Registered adapter: snowflake=1.11.3
+[0m23:17:34.550458 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m23:17:34.688240 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:17:34.688240 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m23:17:34.689247 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:17:34.690116 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.dbt_bi_metrics_platform_db
+[0m23:17:34.696508 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a72ea826-9181-436f-a0d0-f4be2f74ff8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000282294A1540>]}
+[0m23:17:34.767113 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ACER\Desktop\dbt_bi_metrics_platform_db\target\manifest.json
+[0m23:17:34.770113 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ACER\Desktop\dbt_bi_metrics_platform_db\target\semantic_manifest.json
+[0m23:17:34.795566 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a72ea826-9181-436f-a0d0-f4be2f74ff8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002822944F310>]}
+[0m23:17:34.796566 [info ] [MainThread]: Found 522 macros
+[0m23:17:34.797572 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a72ea826-9181-436f-a0d0-f4be2f74ff8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002822945CB80>]}
+[0m23:17:34.799676 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m23:17:34.803575 [debug] [MainThread]: Command end result
+[0m23:17:34.834565 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ACER\Desktop\dbt_bi_metrics_platform_db\target\manifest.json
+[0m23:17:34.837565 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ACER\Desktop\dbt_bi_metrics_platform_db\target\semantic_manifest.json
+[0m23:17:34.842571 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ACER\Desktop\dbt_bi_metrics_platform_db\target\run_results.json
+[0m23:17:34.843572 [info ] [MainThread]: 
+[0m23:17:34.844621 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:17:34.845587 [info ] [MainThread]: 
+[0m23:17:34.846575 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=0
+[0m23:17:34.847586 [debug] [MainThread]: Command `dbt seed` succeeded at 23:17:34.847586 after 1.43 seconds
+[0m23:17:34.848582 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028225F9D000>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028228E46EF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028226959360>]}
+[0m23:17:34.848582 [debug] [MainThread]: Flushing usage events
+[0m23:17:36.196997 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:18:34.208208 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D39D8C9000>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D39EB690C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D39EB68220>]}
+
+
+============================== 23:18:34.213330 | 6ffa0c80-2fde-4298-9bc4-0f6e02ec432f ==============================
+[0m23:18:34.213330 [info ] [MainThread]: Running with dbt=1.11.7
+[0m23:18:34.214216 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\ACER\\.dbt', 'use_colors': 'True', 'invocation_command': 'dbt seed', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\ACER\\Desktop\\dbt_bi_metrics_platform_db\\logs'}
+[0m23:18:34.646969 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m23:18:34.647944 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m23:18:34.648902 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m23:18:34.912250 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6ffa0c80-2fde-4298-9bc4-0f6e02ec432f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D39EB69180>]}
+[0m23:18:35.003095 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6ffa0c80-2fde-4298-9bc4-0f6e02ec432f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D39E310610>]}
+[0m23:18:35.004101 [info ] [MainThread]: Registered adapter: snowflake=1.11.3
+[0m23:18:35.327378 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m23:18:35.397226 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m23:18:35.398459 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '6ffa0c80-2fde-4298-9bc4-0f6e02ec432f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D39DB7B6D0>]}
+[0m23:18:36.906627 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.dbt_bi_metrics_platform_db.staging
+[0m23:18:36.918723 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6ffa0c80-2fde-4298-9bc4-0f6e02ec432f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D39E289540>]}
+[0m23:18:36.990768 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ACER\Desktop\dbt_bi_metrics_platform_db\target\manifest.json
+[0m23:18:36.993771 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ACER\Desktop\dbt_bi_metrics_platform_db\target\semantic_manifest.json
+[0m23:18:37.015780 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6ffa0c80-2fde-4298-9bc4-0f6e02ec432f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D3A0CBA530>]}
+[0m23:18:37.016784 [info ] [MainThread]: Found 522 macros
+[0m23:18:37.017770 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6ffa0c80-2fde-4298-9bc4-0f6e02ec432f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D3A0D36C80>]}
+[0m23:18:37.019769 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m23:18:37.021774 [debug] [MainThread]: Command end result
+[0m23:18:37.051633 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ACER\Desktop\dbt_bi_metrics_platform_db\target\manifest.json
+[0m23:18:37.054620 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ACER\Desktop\dbt_bi_metrics_platform_db\target\semantic_manifest.json
+[0m23:18:37.060619 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ACER\Desktop\dbt_bi_metrics_platform_db\target\run_results.json
+[0m23:18:37.060619 [info ] [MainThread]: 
+[0m23:18:37.061873 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:18:37.063224 [info ] [MainThread]: 
+[0m23:18:37.064251 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=0
+[0m23:18:37.066245 [debug] [MainThread]: Command `dbt seed` succeeded at 23:18:37.065249 after 2.97 seconds
+[0m23:18:37.066245 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D39D8C9000>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D39DB71480>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D3A09C7670>]}
+[0m23:18:37.067297 [debug] [MainThread]: Flushing usage events
+[0m23:18:38.663226 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:18:41.922787 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021910339060>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000219115675B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000219115666B0>]}
+
+
+============================== 23:18:41.927245 | e5375e2c-c08a-41ce-a67a-2a1aac8066c2 ==============================
+[0m23:18:41.927245 [info ] [MainThread]: Running with dbt=1.11.7
+[0m23:18:41.928237 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\ACER\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt run', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\ACER\\Desktop\\dbt_bi_metrics_platform_db\\logs'}
+[0m23:18:42.360347 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m23:18:42.361347 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m23:18:42.362347 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m23:18:42.638456 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e5375e2c-c08a-41ce-a67a-2a1aac8066c2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021913298BE0>]}
+[0m23:18:42.739005 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e5375e2c-c08a-41ce-a67a-2a1aac8066c2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021910CFAB00>]}
+[0m23:18:42.741118 [info ] [MainThread]: Registered adapter: snowflake=1.11.3
+[0m23:18:43.122502 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m23:18:43.299094 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:18:43.300134 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m23:18:43.300134 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:18:43.301053 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.dbt_bi_metrics_platform_db.staging
+[0m23:18:43.308036 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e5375e2c-c08a-41ce-a67a-2a1aac8066c2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021913841510>]}
+[0m23:18:43.372979 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ACER\Desktop\dbt_bi_metrics_platform_db\target\manifest.json
+[0m23:18:43.375872 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ACER\Desktop\dbt_bi_metrics_platform_db\target\semantic_manifest.json
+[0m23:18:43.396869 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e5375e2c-c08a-41ce-a67a-2a1aac8066c2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000219137F1900>]}
+[0m23:18:43.398346 [info ] [MainThread]: Found 522 macros
+[0m23:18:43.399370 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e5375e2c-c08a-41ce-a67a-2a1aac8066c2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000219137F2EC0>]}
+[0m23:18:43.401936 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m23:18:43.405049 [debug] [MainThread]: Command end result
+[0m23:18:43.440050 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ACER\Desktop\dbt_bi_metrics_platform_db\target\manifest.json
+[0m23:18:43.444963 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ACER\Desktop\dbt_bi_metrics_platform_db\target\semantic_manifest.json
+[0m23:18:43.453966 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ACER\Desktop\dbt_bi_metrics_platform_db\target\run_results.json
+[0m23:18:43.455969 [debug] [MainThread]: Command `dbt run` succeeded at 23:18:43.455969 after 1.64 seconds
+[0m23:18:43.457073 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021910339060>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000219133591E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021913802A40>]}
+[0m23:18:43.458071 [debug] [MainThread]: Flushing usage events
+[0m23:18:45.216258 [debug] [MainThread]: An error was encountered while trying to flush usage events
