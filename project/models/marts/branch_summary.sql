@@ -7,3 +7,4 @@ select
     sum(quantity) as total_qty
 from {{ ref('stg_sales') }}
 group by branch, city
+
