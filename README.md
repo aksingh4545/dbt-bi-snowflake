@@ -376,7 +376,7 @@ Always use `{{ ref() }}` to reference other models instead of hardcoding table n
 Choose the right materialization strategy:
 - `table`: For large, frequently queried datasets
 - `view`: For simple transformations or small datasets
-- `incremental`: For large tables that grow over time
+- `incremental`: For large tables that grow over time and Add/update only new rows (incremental ✅)
 
 ### 4. **Add Tests**
 Define data quality tests in your model files:
