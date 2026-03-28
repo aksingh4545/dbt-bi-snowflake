@@ -372,6 +372,127 @@ dbt run -m stg_sales+
 ### 2. **Use Refs for Dependencies**
 Always use `{{ ref() }}` to reference other models instead of hardcoding table names.
 
+## 🔗 Understanding `ref()` in dbt (Simple Example)
+
+Let’s make `ref()` super simple with a real-life style example in **dbt (data build tool)** 👇
+
+---
+
+### 🧠 Scenario: You have raw data
+
+You start with a raw table:
+
+```
+raw_orders
+```
+
+---
+
+### 🧩 Step 1: Create a staging model
+
+File: `models/stg_orders.sql`
+
+```sql
+SELECT
+  order_id,
+  customer_id,
+  amount
+FROM raw_orders
+```
+
+Now dbt creates a model called:
+
+```
+stg_orders
+```
+
+---
+
+### 🔗 Step 2: Use `ref()` in another model
+
+File: `models/customer_orders.sql`
+
+```sql
+SELECT
+  customer_id,
+  SUM(amount) AS total_spent
+FROM {{ ref('stg_orders') }}
+GROUP BY customer_id
+```
+
+---
+
+### 🤔 What just happened?
+
+Instead of writing:
+
+```sql
+FROM stg_orders
+```
+
+You wrote:
+
+```sql
+FROM {{ ref('stg_orders') }}
+```
+
+---
+
+### ⚙️ Why this matters (very simple)
+
+#### ✅ 1. dbt runs things in the right order
+
+* First → `stg_orders`
+* Then → `customer_orders`
+
+---
+
+#### ✅ 2. No need to write schema/database
+
+dbt automatically converts:
+
+```
+{{ ref('stg_orders') }}
+```
+
+into something like:
+
+```
+dev_analytics.stg_orders
+```
+
+---
+
+#### ✅ 3. Safe & flexible
+
+If you rename `stg_orders` → `stg_orders_v2`
+
+You only update:
+
+```sql
+ref('stg_orders_v2')
+```
+
+No breaking changes 💡
+
+---
+
+### 🔄 Final Flow (easy to visualize)
+
+```
+raw_orders  →  stg_orders  →  customer_orders
+                ↑
+              ref()
+```
+
+---
+
+### 🧠 One-line understanding
+
+> `ref()` = “Use data from another dbt model in a smart, connected way”
+
+
+
 ### 3. **Configure Materializations**
 Choose the right materialization strategy:
 - `table`: For large, frequently queried datasets
