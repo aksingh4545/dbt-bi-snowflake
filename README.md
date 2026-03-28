@@ -683,14 +683,122 @@ Owner: Data Engineering Team
 */
 ```
 
-### 6. **Use Macros for Reusability**
-Create macros for common transformations:
+### 6.🧩 Macros in dbt (with Simple Example)
 
-```sql
--- macros/calculate_margin.sql
-{% macro calculate_margin(revenue, cogs) %}
-    ({{ revenue }} - {{ cogs }}) / {{ revenue }} * 100
+In **dbt (data build tool)**, **macros** are reusable pieces of SQL (like functions) written using **Jinja templating**.
+
+> Think of macros as: **“write once, reuse everywhere” for SQL logic**
+
+---
+
+### 🧠 Why use macros?
+
+* Avoid repeating SQL code
+* Make queries dynamic
+* Keep logic clean and reusable
+
+---
+
+### 📁 Where macros are stored
+
+```id="c3k9vd"
+macros/
+  my_macro.sql
+```
+
+---
+
+### ✍️ Example 1: Simple macro
+
+File: `macros/add_tax.sql`
+
+```sql id="8l2p7m"
+{% macro add_tax(amount) %}
+    {{ amount }} * 1.18
 {% endmacro %}
+```
+
+👉 This macro adds 18% tax
+
+---
+
+### 🔗 Using the macro in a model
+
+```sql id="r2w6xz"
+SELECT
+  order_id,
+  {{ add_tax('amount') }} AS amount_with_tax
+FROM orders
+```
+
+---
+
+### ⚙️ What dbt compiles it into
+
+```sql id="q1v7sa"
+SELECT
+  order_id,
+  amount * 1.18 AS amount_with_tax
+FROM orders
+```
+
+---
+
+### 🧩 Example 2: Dynamic column selection
+
+File: `macros/select_columns.sql`
+
+```sql id="9xk3pj"
+{% macro select_columns(cols) %}
+    {{ cols | join(', ') }}
+{% endmacro %}
+```
+
+Usage:
+
+```sql id="y5b8nm"
+SELECT
+  {{ select_columns(['order_id', 'customer_id', 'amount']) }}
+FROM orders
+```
+
+---
+
+### 🔄 Example 3: Conditional logic
+
+```sql id="m4z7qr"
+{% macro filter_recent(column) %}
+    {% if target.name == 'prod' %}
+        {{ column }} >= current_date - interval '7 days'
+    {% else %}
+        {{ column }} >= current_date - interval '30 days'
+    {% endif %}
+{% endmacro %}
+```
+
+Usage:
+
+```sql id="t8u2lk"
+SELECT *
+FROM orders
+WHERE {{ filter_recent('order_date') }}
+```
+
+---
+
+### 🚀 Why macros are powerful
+
+* 🔁 Reusable logic across models
+* ⚙️ Dynamic SQL generation
+* 🌍 Environment-aware queries
+* 🧹 Cleaner and shorter code
+
+---
+
+### 🧠 One-line understanding
+
+> Macros = “custom SQL functions in dbt to make your code reusable and dynamic”
+
 ```
 
 ### 7. **Incremental Models for Large Data**
