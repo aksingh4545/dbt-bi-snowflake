@@ -38,6 +38,156 @@ A comprehensive dbt (data build tool) project for building a business intelligen
 | **Tests** | Assertions about your data quality (e.g., uniqueness, not null). |
 | **Seeds** | CSV files that dbt loads into your warehouse as tables. |
 
+
+## 🚀 Why Use dbt for Transformations (When Warehouses Can Do It Too?)
+
+You’re absolutely right to question this—because technically, you **can do all transformations directly in a warehouse** like Snowflake or BigQuery.
+
+But here’s the key point:
+
+> **dbt doesn’t replace the warehouse — it makes working with it structured, scalable, and maintainable.**
+
+Let’s break it down simply 👇
+
+---
+
+### 🧠 Without dbt (just warehouse)
+
+You write SQL like:
+
+```sql id="qzj7pn"
+CREATE TABLE final_table AS
+SELECT ...
+```
+
+Problems start when things grow:
+
+* ❌ Queries scattered across notebooks / tools
+* ❌ No clear order of execution
+* ❌ Hard to debug
+* ❌ No version control
+* ❌ Reusability is poor
+
+---
+
+### 🚀 With dbt (data build tool)
+
+dbt brings **software engineering practices to SQL**
+
+---
+
+### 🔑 Why we use dbt instead of only warehouse
+
+#### 🔗 1. Dependency management (automatic order)
+
+With `ref()`:
+
+```sql id="6b1s8p"
+FROM {{ ref('stg_orders') }}
+```
+
+dbt builds a DAG:
+
+```id="q7yx5u"
+stg_orders → customer_orders → final_report
+```
+
+👉 No need to manually manage execution order
+
+---
+
+#### 📁 2. Project structure (clean & scalable)
+
+Instead of random queries:
+
+```id="7n4r2m"
+models/
+  staging/
+  intermediate/
+  marts/
+```
+
+👉 Easy to understand for teams
+
+---
+
+#### 🔄 3. Reusability
+
+* Build once → reuse everywhere
+* No repeated SQL logic
+
+---
+
+#### 🧪 4. Testing (big advantage)
+
+You can add tests like:
+
+* unique
+* not null
+* relationships
+
+👉 Data quality checks built-in
+
+---
+
+#### 🧾 5. Version control (Git)
+
+* Track changes
+* Collaborate safely
+* Rollback if needed
+
+---
+
+#### ⚙️ 6. Environment handling
+
+dbt automatically handles:
+
+* dev vs prod schemas
+* table naming
+
+👉 No manual switching
+
+---
+
+#### ⚡ 7. Incremental models (performance)
+
+Process only new data instead of full tables
+👉 Saves cost + time
+
+---
+
+#### 📊 8. Documentation
+
+dbt auto-generates:
+
+* data lineage (graph)
+* model descriptions
+
+---
+
+### 🆚 Simple comparison
+
+| Without dbt      | With dbt           |
+| ---------------- | ------------------ |
+| Raw SQL scripts  | Structured project |
+| Manual execution | Automated DAG      |
+| No testing       | Built-in tests     |
+| Hard to scale    | Easy to scale      |
+
+---
+
+### 🧠 Real-world analogy
+
+* Warehouse = 🏭 Factory (does the heavy work)
+* dbt = 🧠 Manager/system organizing the factory
+
+---
+
+### 🎯 Final understanding
+
+> You *can* transform data in the warehouse
+> but **dbt makes it reliable, organized, and production-ready**
+
 ---
 
 ## Project Overview
